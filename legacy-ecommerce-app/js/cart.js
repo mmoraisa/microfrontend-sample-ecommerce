@@ -8,9 +8,13 @@ $(document).ready(function() {
 
     $.each($(this).find('.product'), function(i, product) {
 
-      purchased +=
-        $(product).find('input[name="quantity"]').val() + ' '
-        + $(product).attr('sku') + ' (' + $(product).find('.product__title').text() + ')\n';
+      var quantity = $(product).find('input[name="quantity"]').val();
+
+      if(parseInt(quantity, 10)) {
+        purchased +=
+          quantity + ' ' + $(product).attr('sku') +
+          ' (' + $(product).find('.product__title').text() + ')\n';
+      }
 
     });
 

@@ -7,34 +7,36 @@
   </head>
   <body>
     <h1>Your shopping cart</h1>
-    <form id="products-list">
-      <div class="product" sku="NF130LL/A">
-        <input name="quantity" type="number" required value="1" min="0" />
-        <img src="img/iphone.webp"/>
-        <div class="product__description">
-          <p class="product__title">iPhone 8 Apple</p>
-          <p class="product__description">Apple · iPhone · iPhone 8 · iPhone 8 (Original) · iOS · Tela de 4,7 polegadas · Impressão digital · 12 megapixels · 4G LTE · 64 GB</p>
+    <form>
+      <section id="products-list">
+        <div class="product" sku="NF130LL/A">
+          <input name="quantity" type="number" required value="1" min="0" />
+          <img src="img/iphone.webp"/>
+          <div class="product__description">
+            <p class="product__title">iPhone 8 Apple</p>
+            <p class="product__description">Apple · iPhone · iPhone 8 · iPhone 8 (Original) · iOS · Tela de 4,7 polegadas · Impressão digital · 12 megapixels · 4G LTE · 64 GB</p>
+          </div>
+          <button type="button" name="remove">X</button>
         </div>
-        <button type="button" name="remove">X</button>
-      </div>
-      <div class="product" sku="M16541">
-        <input name="quantity" type="number" required value="1" min="0" />
-        <img src="img/motorola.webp"/>
-        <div class="product__description">
-          <p class="product__title">Motorola Moto G7</p>
-          <p class="product__description">Motorola · Motorola moto · moto g · Android · Tela de 5,7 polegadas · Impressão digital · 13 megapixels · 4G LTE · 149 gramas · 32 GB</p>
+        <div class="product" sku="M16541">
+          <input name="quantity" type="number" required value="1" min="0" />
+          <img src="img/motorola.webp"/>
+          <div class="product__description">
+            <p class="product__title">Motorola Moto G7</p>
+            <p class="product__description">Motorola · Motorola moto · moto g · Android · Tela de 5,7 polegadas · Impressão digital · 13 megapixels · 4G LTE · 149 gramas · 32 GB</p>
+          </div>
+          <button type="button" name="remove">X</button>
         </div>
-        <button type="button" name="remove">X</button>
-      </div>
-      <div class="product" sku="SG94353-/1">
-        <input name="quantity" type="number" required value="1" min="0" />
-        <img src="img/samsung.webp"/>
-        <div class="product__description">
-          <p class="product__title">Samsung Galaxy J2 Core</p>
-          <p class="product__description">Samsung · Galaxy · Galaxy J · Galaxy J2 · Android · Tela de 5 polegadas · 8 megapixels · 4G LTE · 18 horas de conversação · 154 gramas</p>
+        <div class="product" sku="SG94353-/1">
+          <input name="quantity" type="number" required value="1" min="0" />
+          <img src="img/samsung.webp"/>
+          <div class="product__description">
+            <p class="product__title">Samsung Galaxy J2 Core</p>
+            <p class="product__description">Samsung · Galaxy · Galaxy J · Galaxy J2 · Android · Tela de 5 polegadas · 8 megapixels · 4G LTE · 18 horas de conversação · 154 gramas</p>
+          </div>
+          <button type="button" name="remove">X</button>
         </div>
-        <button type="button" name="remove">X</button>
-      </div>
+      </section>
       <button type="submit">Buy Now!</button>
     </form>
     <script src="js/cart.js"></script>
