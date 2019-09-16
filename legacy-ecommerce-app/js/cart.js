@@ -18,4 +18,18 @@ $(document).ready(function() {
 
   });
 
+  $.each($('#products-list .product'), function(i, product) {
+
+    $(product).find('button[name="remove"]').on('click', function() {
+
+      if($('#products-list .product').length > 1) {
+        $(product).remove();
+      }
+      else {
+        alert('You must leave at least one product in your cart.');
+      }
+    })
+
+  });
+
 });
