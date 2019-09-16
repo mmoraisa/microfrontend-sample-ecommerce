@@ -1,3 +1,46 @@
 body {
   padding: 30px;
 }
+
+/* Products */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#products-list {
+  margin-bottom: 10px;
+}
+
+.product {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  margin: 3px 0;
+  padding: 0 20px;
+}
+
+.product input[name="quantity"] {
+  text-align: center;
+  width: 30px;
+}
+
+.product img {
+  height: 75px;
+  margin: 0 20px;
+  width: 75px;
+}
+
+.product button[name="remove"] {
+  margin-left: 20px;
+}
+
+button[type="submit"] {
+  align-self: flex-end;
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 10px 20px;
+}
