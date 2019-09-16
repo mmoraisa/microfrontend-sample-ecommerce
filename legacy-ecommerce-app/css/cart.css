@@ -1,3 +1,40 @@
 body {
   padding: 30px;
 }
+
+/* Products */
+
+#products-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.product {
+  align-items: center;
+  border: 1px solid;
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+  padding: 10px 30px;
+}
+
+.product input[name="quantity"] {
+  text-align: center;
+  width: 40px;
+}
+
+.product img {
+  height: 75px;
+  margin: 0 20px;
+  width: 75px;
+}
+
+.product button[name="remove"] {
+  margin-left: 20px;
+}
+
+#products-list button[type="submit"] {
+  align-self: flex-end;
+  font-size: 16px;
+  padding: 10px 20px;
+}
