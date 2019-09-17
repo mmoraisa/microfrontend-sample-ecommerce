@@ -1,3 +1,5 @@
+import Product from "../classes/Product";
+
 /* Action Types */
 export const CALL_FETCH_PRODUCTS = 'CALL_FETCH_PRODUCTS';
 export const FETCH_PRODUCTS_FAILED = 'FETCH_PRODUCTS_FAILED';
@@ -18,7 +20,7 @@ export function fetchProductsSuccess(products) {
 
 /* Initial State */
 const INITIAL_STATE = {
-  data: {},
+  data: [],
   errors: {
     fetch: null
   },
@@ -30,7 +32,7 @@ const INITIAL_STATE = {
 /* Reducer */
 export default function(state = INITIAL_STATE, action) {
 
-  const { error, products, type } = state;
+  const { error, products, type } = action;
 
   switch(type) {
     case CALL_FETCH_PRODUCTS:
@@ -61,9 +63,8 @@ export default function(state = INITIAL_STATE, action) {
       return {
         ...state,
         data:
-          products.reduce(
-            (list, product) => list[product.id] = product, {}
-          ),
+          products.map(product =>
+            new Product(product.id, product.name)),
         errors: {
           ...state.errors,
           fetch: null,
