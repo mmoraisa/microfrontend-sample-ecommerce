@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import 'antd/dist/antd.css';
+import { fetchProducts } from '../../ducks/ProductsDucks';
 
-const App = () => {
+const App = ({ callFetchProducts }) => {
+
+  useEffect(() => {
+    callFetchProducts()
+  }, []);
 
   return (
     <div>App</div>
@@ -9,4 +15,11 @@ const App = () => {
 
 }
 
-export default App;
+export default connect(
+  () => ({}),
+  dispatch => ({
+    callFetchProducts() {
+      dispatch(fetchProducts([]))
+    }
+  })
+)(App);
