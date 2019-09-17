@@ -35,7 +35,7 @@ class ProductsAPI {
   static fetchProducts = SKUs =>
     new Promise(resolve => {
 
-      let products = [...CommonProducts];
+      let products = SKUs.length ? [...CommonProducts] : [];
 
       if(SKUs.includes(CONSTANT_SKUs.iphone)) {
         products = [...products, ...iPhoneProducts, ...PremiumProducts];
