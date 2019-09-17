@@ -10,7 +10,7 @@ const App = ({ callFetchProducts, products, SKUs }) => {
 
   useEffect(() => {
     callFetchProducts(SKUs)
-  }, [callFetchProducts]);
+  }, [callFetchProducts, SKUs]);
 
   return (
     <ProductsList
@@ -36,7 +36,10 @@ App.propTypes = {
 }
 
 export default connect(
-  ({ products }) => ({ products }),
+  ({ application, products }) => ({
+    products,
+    SKUs: application.SKUs,
+  }),
   dispatch => ({
     callFetchProducts(SKUs) {
       dispatch(fetchProducts(SKUs))
